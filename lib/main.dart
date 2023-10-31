@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:story_line/Home.dart';
 import 'package:story_line/language.dart';
 import 'package:story_line/stype.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: bn(),
+      home: home(),
     );
   }
 }
