@@ -154,7 +154,7 @@ mybottomsheet(context) {
     width: MediaQuery.of(context).size.width,
 
     decoration: BoxDecoration(
-      color: mycolors.green,
+      color: Colors.white,
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(30),
         topRight: Radius.circular(30),

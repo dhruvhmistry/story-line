@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:story_line/bs.dart';
 import 'package:story_line/language.dart';
-import 'package:story_line/readpage.dart';
 import 'package:story_line/ss.dart';
 
 void main() {
@@ -177,6 +175,7 @@ class s1 extends StatelessWidget {
                   ),
                 ),
               ),
+              Image.asset("assets/images/p.jpg")
             ],
           ),
         ),

@@ -62,7 +62,7 @@ class home extends StatelessWidget {
                     padding: const EdgeInsets.all(0),
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 21, 0),
                         child: Container(
                           height: 150,
                           width: 110,
@@ -75,7 +75,7 @@ class home extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(right: 21),
                         child: Container(
                           height: 90,
                           width: 110,
@@ -87,7 +87,7 @@ class home extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 21, 0),
                         child: Container(
                           height: 90,
                           width: 110,
@@ -98,7 +98,7 @@ class home extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 21, 0),
                         child: Container(
                           height: 90,
                           width: 110,

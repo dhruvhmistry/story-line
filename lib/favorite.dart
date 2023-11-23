@@ -9,6 +9,7 @@ class favorite extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
+            leading: Image.asset('assets/images/LOGO1.jpg'),
             backgroundColor: mycolors.green,
             title: Text("              Favorite Story"),
           ),

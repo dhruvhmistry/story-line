@@ -1,14 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:story_line/appcolor.dart';
+import 'package:story_line/main.dart';
 
 class ss extends StatelessWidget {
   const ss({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 2), () {
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => s1(),
+      ));
+    });
     return SafeArea(
       child: Scaffold(
-        backgroundColor: mycolors.Lightgreen,
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

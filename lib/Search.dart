@@ -12,6 +12,7 @@ class search extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: Image.asset('assets/images/LOGO1.jpg'),
           backgroundColor: Color(0xFF2B9684),
           title: Text('                 Search Story'),
         ),
