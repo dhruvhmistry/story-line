@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:story_line/favorite.dart';
+import 'package:story_line/Anim%20Stort.dart';
+import 'package:story_line/Life%20L.dart';
+import 'package:story_line/Motivational.dart';
+import 'package:story_line/Picture%20Story.dart';
 
 class search extends StatelessWidget {
   const search({super.key});
@@ -54,9 +57,11 @@ class search extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => favorite(),
-                  )),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => anim(),
+                    ),
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
@@ -93,34 +98,41 @@ class search extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 80,
-                    width: 170,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFD8FFF8),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: 1,
-                        color: Color(0xFF2B9684),
+                  child: InkWell(
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => life(),
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/t2.jpg"),
+                    child: Container(
+                      height: 80,
+                      width: 170,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFD8FFF8),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          width: 1,
+                          color: Color(0xFF2B9684),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: Container(
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/t2.jpg"),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Text("Life Lesson")
-                      ],
+                          Text("Life Lesson")
+                        ],
+                      ),
                     ),
                   ),
                 )
@@ -131,34 +143,41 @@ class search extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 80,
-                    width: 170,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFD8FFF8),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: 1,
-                        color: Color(0xFF2B9684),
+                  child: InkWell(
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => moti(),
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/t3.jpg"),
+                    child: Container(
+                      height: 80,
+                      width: 170,
+                      decoration: BoxDecoration(
+                        color: Color(0xFFD8FFF8),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          width: 1,
+                          color: Color(0xFF2B9684),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: Container(
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/t3.jpg"),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Text("Motivational")
-                      ],
+                          Text("Motivational")
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -179,13 +198,20 @@ class search extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(6.0),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/t4.jpg"),
+                          child: InkWell(
+                            onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => picture(),
+                              ),
+                            ),
+                            child: Container(
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/t4.jpg"),
+                                ),
                               ),
                             ),
                           ),

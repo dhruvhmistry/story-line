@@ -10,6 +10,7 @@ class favorite extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: mycolors.green,
+            title: Text("              Favorite Story"),
           ),
           body: ListView.builder(
             itemCount: 5,
@@ -37,12 +38,24 @@ class favorite extends StatelessWidget {
                               child: Container(
                                 height: 85,
                                 width: 70,
-                                color: mycolors.Lightgreen,
+                                // color: mycolors.Lightgreen,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/home1.jpg"),
+                                        fit: BoxFit.fill)),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(12.0),
                               child: Text("The Fox and the Grapes"),
+                            ),
+                            SizedBox(
+                              width: 70,
+                            ),
+                            Icon(
+                              Icons.favorite,
+                              color: mycolors.green,
                             )
                           ],
                         ),

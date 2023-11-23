@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:story_line/Search.dart';
+import 'package:story_line/readpage.dart';
 
 class home extends StatelessWidget {
   const home({super.key});
@@ -20,39 +20,513 @@ class home extends StatelessWidget {
           title: Text('                   Story Line'),
         ),
         // bottomNavigationBar: bn(),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-                child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Container(
-                height: 140,
-                width: 380,
-                decoration: BoxDecoration(
-                  color: Color(0x3F000000),
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/h1.jpg"),
-                      fit: BoxFit.fill),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                  child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: InkWell(
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => read(),
+                    ),
+                  ),
+                  child: Container(
+                    height: 140,
+                    width: 380,
+                    decoration: BoxDecoration(
+                      color: Color(0x3F000000),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/h1.jpg"),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
+                ),
+              )),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
               ),
-            )
-                // Container(
-                //   height: 150,
-                //   width: 400,
-
-                //   child: Image.asset(
-                //     "assets/images/h1.jpg",
-                //   ),
-
-                // ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-            Padding(
-              padding: const EdgeInsets.only(left: 18),
-              child: Text('HOME PAGE'),
-            ),
-            // GridView.builder(gridDelegate: gridDelegate, itemBuilder: itemBuilder)
-          ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18),
+                child: Text(
+                  'HOME PAGE',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(13.0),
+                child: Container(
+                  height: 130,
+                  width: 390,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.all(0),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home2.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home3.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                        child: Container(
+                          height: 90,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/home4.jpg"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: Container(
+                          height: 150,
+                          width: 110,
+                          // color: mycolors.Lightgreen,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/home1.jpg"),
+                                fit: BoxFit.fill),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
